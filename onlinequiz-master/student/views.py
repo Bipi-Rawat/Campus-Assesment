@@ -9,7 +9,12 @@ from datetime import date, timedelta
 from quiz import models as QMODEL
 from teacher import models as TMODEL
 
+def log_activity(request):
+    # Logic for logging activity
+    return render(request, 'student/log_activity.html')
 
+def home(request):
+    return render(request, 'home.html')
 #for showing signup/login button for student
 def studentclick_view(request):
     if request.user.is_authenticated:
